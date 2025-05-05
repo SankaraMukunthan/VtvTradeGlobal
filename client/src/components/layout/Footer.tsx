@@ -1,0 +1,154 @@
+import { Link } from "wouter";
+import { 
+  LinkedinIcon, 
+  TwitterIcon, 
+  FacebookIcon, 
+  InstagramIcon,
+  MapPinIcon,
+  PhoneIcon,
+  MailIcon,
+  ClockIcon
+} from "lucide-react";
+
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <footer className="bg-primary text-white pt-16 pb-8">
+      <div className="container mx-auto px-4">
+        <div className="grid md:grid-cols-4 gap-8 mb-12">
+          {/* Company Info */}
+          <div>
+            <Link href="/" className="flex items-center mb-6">
+              <span className="text-white font-merriweather font-bold text-2xl">VTV</span>
+              <span className="text-secondary font-merriweather ml-1 text-2xl">Enterprises</span>
+            </Link>
+            <p className="text-white/80 mb-6">
+              Your trusted partner for global trade, connecting India's finest agricultural products 
+              to international markets and bringing premium imports to domestic customers.
+            </p>
+            <div className="flex space-x-4">
+              <a href="#" className="text-white/80 hover:text-secondary transition duration-300" aria-label="LinkedIn">
+                <LinkedinIcon size={20} />
+              </a>
+              <a href="#" className="text-white/80 hover:text-secondary transition duration-300" aria-label="Twitter">
+                <TwitterIcon size={20} />
+              </a>
+              <a href="#" className="text-white/80 hover:text-secondary transition duration-300" aria-label="Facebook">
+                <FacebookIcon size={20} />
+              </a>
+              <a href="#" className="text-white/80 hover:text-secondary transition duration-300" aria-label="Instagram">
+                <InstagramIcon size={20} />
+              </a>
+            </div>
+          </div>
+          
+          {/* Quick Links */}
+          <div>
+            <h3 className="text-lg font-merriweather font-bold mb-6">Quick Links</h3>
+            <ul className="space-y-3">
+              <li>
+                <Link href="/" className="text-white/80 hover:text-secondary transition duration-300">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className="text-white/80 hover:text-secondary transition duration-300">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/products#export-products" className="text-white/80 hover:text-secondary transition duration-300">
+                  Export Products
+                </Link>
+              </li>
+              <li>
+                <Link href="/products#import-products" className="text-white/80 hover:text-secondary transition duration-300">
+                  Import Products
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="text-white/80 hover:text-secondary transition duration-300">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-white/80 hover:text-secondary transition duration-300">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+          
+          {/* Products */}
+          <div>
+            <h3 className="text-lg font-merriweather font-bold mb-6">Our Products</h3>
+            <ul className="space-y-3">
+              <li>
+                <Link href="/products#turmeric" className="text-white/80 hover:text-secondary transition duration-300">
+                  Turmeric
+                </Link>
+              </li>
+              <li>
+                <Link href="/products#rice" className="text-white/80 hover:text-secondary transition duration-300">
+                  Basmati Rice
+                </Link>
+              </li>
+              <li>
+                <Link href="/products#spices" className="text-white/80 hover:text-secondary transition duration-300">
+                  Spices
+                </Link>
+              </li>
+              <li>
+                <Link href="/products#pulses" className="text-white/80 hover:text-secondary transition duration-300">
+                  Pulses
+                </Link>
+              </li>
+              <li>
+                <Link href="/products#nuts" className="text-white/80 hover:text-secondary transition duration-300">
+                  Nuts
+                </Link>
+              </li>
+              <li>
+                <Link href="/products#gumDamar" className="text-white/80 hover:text-secondary transition duration-300">
+                  Gum Damar
+                </Link>
+              </li>
+            </ul>
+          </div>
+          
+          {/* Contact Info */}
+          <div>
+            <h3 className="text-lg font-merriweather font-bold mb-6">Contact Us</h3>
+            <ul className="space-y-3">
+              <li className="flex">
+                <MapPinIcon className="h-5 w-5 mt-1 mr-3 text-secondary flex-shrink-0" />
+                <span className="text-white/80">123 Business Park, Sector 15, Mumbai, Maharashtra 400001, India</span>
+              </li>
+              <li className="flex">
+                <PhoneIcon className="h-5 w-5 mt-1 mr-3 text-secondary flex-shrink-0" />
+                <span className="text-white/80">+91 22 1234 5678</span>
+              </li>
+              <li className="flex">
+                <MailIcon className="h-5 w-5 mt-1 mr-3 text-secondary flex-shrink-0" />
+                <span className="text-white/80">info@vtventerprises.com</span>
+              </li>
+              <li className="flex">
+                <ClockIcon className="h-5 w-5 mt-1 mr-3 text-secondary flex-shrink-0" />
+                <span className="text-white/80">Mon-Fri: 9:00 AM - 6:00 PM IST</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div className="pt-8 border-t border-white/20 text-center">
+          <p className="text-white/70 text-sm">
+            &copy; {currentYear} VTV Enterprises. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
