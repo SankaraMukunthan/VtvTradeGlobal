@@ -59,13 +59,9 @@ const Home = () => {
                   style={{ height: "500px" }}
                 />
                 <div className="absolute -bottom-6 -right-6 bg-secondary p-4 rounded-lg shadow-lg hidden md:block">
-                  <div className="flex items-center space-x-4">
+                  <div className="flex items-center justify-center">
                     <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center">
                       <span className="text-primary font-merriweather font-bold text-2xl">VTV</span>
-                    </div>
-                    <div>
-                      <span className="block text-white font-merriweather font-bold">Venu Gopal V</span>
-                      <span className="text-white text-sm">Founder & CEO</span>
                     </div>
                   </div>
                 </div>
