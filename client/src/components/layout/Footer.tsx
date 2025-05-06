@@ -123,15 +123,15 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex">
                 <MapPinIcon className="h-5 w-5 mt-1 mr-3 text-secondary flex-shrink-0" />
-                <span className="text-white/80">123 Business Park, Sector 15, Mumbai, Maharashtra 400001, India</span>
+                <span className="text-white/80">No 63, First Floor Alagiri Nagar East Street, Vadapalani, Chennai 600026, India</span>
               </li>
               <li className="flex">
                 <PhoneIcon className="h-5 w-5 mt-1 mr-3 text-secondary flex-shrink-0" />
-                <span className="text-white/80">+91 22 1234 5678</span>
+                <span className="text-white/80">+91 98415 19093</span>
               </li>
               <li className="flex">
                 <MailIcon className="h-5 w-5 mt-1 mr-3 text-secondary flex-shrink-0" />
-                <span className="text-white/80">info@vtventerprises.com</span>
+                <span className="text-white/80">abiindo3333@gmail.com</span>
               </li>
               <li className="flex">
                 <ClockIcon className="h-5 w-5 mt-1 mr-3 text-secondary flex-shrink-0" />

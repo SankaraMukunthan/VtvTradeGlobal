@@ -48,8 +48,8 @@ const Contact = () => {
                       <div className="ml-4">
                         <h4 className="font-semibold text-foreground">Corporate Office</h4>
                         <p className="text-foreground">
-                          123 Business Park, Sector 15<br />
-                          Mumbai, Maharashtra 400001<br />
+                          No 63, First Floor Alagiri Nagar East Street<br />
+                          Vadapalani, Chennai 600026<br />
                           India
                         </p>
                       </div>
@@ -64,8 +64,7 @@ const Contact = () => {
                       <div className="ml-4">
                         <h4 className="font-semibold text-foreground">Phone</h4>
                         <p className="text-foreground">
-                          +91 22 1234 5678<br />
-                          +91 98765 43210 (Mobile)
+                          +91 98415 19093
                         </p>
                       </div>
                     </div>
@@ -79,8 +78,7 @@ const Contact = () => {
                       <div className="ml-4">
                         <h4 className="font-semibold text-foreground">Email</h4>
                         <p className="text-foreground">
-                          info@vtventerprises.com<br />
-                          exports@vtventerprises.com
+                          abiindo3333@gmail.com
                         </p>
                       </div>
                     </div>

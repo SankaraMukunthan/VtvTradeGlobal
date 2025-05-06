@@ -14,12 +14,12 @@ const GoogleMap = () => {
     // Function to initialize the map
     const initializeMap = () => {
       if (window.google && mapRef.current) {
-        // Mumbai coordinates
-        const mumbai = { lat: 19.0760, lng: 72.8777 };
+        // Chennai Vadapalani coordinates
+        const chennai = { lat: 13.0490, lng: 80.2154 };
         
         // Create map
         const map = new window.google.maps.Map(mapRef.current, {
-          center: mumbai,
+          center: chennai,
           zoom: 15,
           styles: [
             {
@@ -67,7 +67,7 @@ const GoogleMap = () => {
         
         // Add marker
         const marker = new window.google.maps.Marker({
-          position: mumbai,
+          position: chennai,
           map: map,
           title: 'VTV Enterprises'
         });
@@ -77,8 +77,8 @@ const GoogleMap = () => {
           content: `
             <div style="padding: 10px; max-width: 200px;">
               <h3 style="margin-top: 0; color: #1B5E20; font-weight: bold;">VTV Enterprises</h3>
-              <p style="margin-bottom: 5px;">123 Business Park, Sector 15</p>
-              <p style="margin-bottom: 5px;">Mumbai, Maharashtra 400001</p>
+              <p style="margin-bottom: 5px;">No 63, First Floor Alagiri Nagar East Street</p>
+              <p style="margin-bottom: 5px;">Vadapalani, Chennai 600026</p>
               <p style="margin-bottom: 0;">India</p>
             </div>
           `
