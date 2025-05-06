@@ -27,20 +27,7 @@ const Footer = () => {
               Your trusted partner for global trade, connecting India's finest agricultural products 
               to international markets and bringing premium imports to domestic customers.
             </p>
-            <div className="flex space-x-4">
-              <a href="#" className="text-white/80 hover:text-secondary transition duration-300" aria-label="LinkedIn">
-                <LinkedinIcon size={20} />
-              </a>
-              <a href="#" className="text-white/80 hover:text-secondary transition duration-300" aria-label="Twitter">
-                <TwitterIcon size={20} />
-              </a>
-              <a href="#" className="text-white/80 hover:text-secondary transition duration-300" aria-label="Facebook">
-                <FacebookIcon size={20} />
-              </a>
-              <a href="#" className="text-white/80 hover:text-secondary transition duration-300" aria-label="Instagram">
-                <InstagramIcon size={20} />
-              </a>
-            </div>
+            {/* Social media links removed as requested */}
           </div>
           
           {/* Quick Links */}

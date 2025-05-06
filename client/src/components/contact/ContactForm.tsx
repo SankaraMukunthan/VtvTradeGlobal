@@ -4,6 +4,8 @@ import { z } from "zod";
 import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
+import emailjs from '@emailjs/browser';
+import { useRef, useState } from "react";
 
 import {
   Form,
@@ -23,7 +25,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { useState } from "react";
 
 const formSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -38,6 +39,7 @@ type FormValues = z.infer<typeof formSchema>;
 const ContactForm = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
   const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
@@ -50,32 +52,87 @@ const ContactForm = () => {
     },
   });
 
-  const mutation = useMutation({
+  // Store EmailJS credentials
+  const serviceId = process.env.EMAILJS_SERVICE_ID || "";
+  const templateId = process.env.EMAILJS_TEMPLATE_ID || "";
+  const publicKey = process.env.EMAILJS_PUBLIC_KEY || "";
+
+  // Initialize EmailJS
+  emailjs.init(publicKey);
+
+  // Still save the contact message to the database
+  const dbMutation = useMutation({
     mutationFn: async (formData: FormValues) => {
       return apiRequest("POST", "/api/contact", formData);
     },
-    onSuccess: () => {
+    onError: (error) => {
+      console.error("Failed to save contact message to database:", error);
+      // We won't show this error to the user if the email was sent successfully
+    },
+  });
+
+  const sendEmail = async (data: FormValues) => {
+    try {
+      const templateParams = {
+        to_email: "abiindo3333@gmail.com",
+        from_name: data.name,
+        from_email: data.email,
+        company: data.company,
+        interest: getInterestLabel(data.interest),
+        message: data.message,
+      };
+
+      await emailjs.send(
+        serviceId,
+        templateId,
+        templateParams
+      );
+
+      return true;
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      throw error;
+    }
+  };
+
+  const getInterestLabel = (value: string): string => {
+    const options: Record<string, string> = {
+      "export": "Exporting Products from India",
+      "import": "Importing Products to India",
+      "both": "Both Import & Export",
+      "other": "Other Inquiry"
+    };
+    return options[value] || value;
+  };
+
+  const onSubmit = async (data: FormValues) => {
+    setIsSubmitting(true);
+    
+    try {
+      // First send the email via EmailJS
+      await sendEmail(data);
+      
+      // Then save to database (don't wait for this to complete)
+      dbMutation.mutate(data);
+      
+      // Show success message and reset form
       toast({
         title: "Message Sent!",
         description: "Thank you for contacting us. We will get back to you shortly.",
         variant: "default",
       });
       form.reset();
-      setIsSubmitting(false);
-    },
-    onError: (error) => {
+    } catch (error) {
+      // Show error message
       toast({
         title: "Failed to send message",
-        description: error.message || "Please try again later.",
+        description: "There was a problem sending your message. Please try again later.",
         variant: "destructive",
       });
+      console.error("Error sending message:", error);
+    } finally {
       setIsSubmitting(false);
-    },
-  });
-
-  const onSubmit = (data: FormValues) => {
-    setIsSubmitting(true);
-    mutation.mutate(data);
+    }
   };
 
   return (
