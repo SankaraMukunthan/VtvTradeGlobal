@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { Link } from "wouter";
-import { CheckCircle, Award, Users, Globe, TrendingUp, ShieldCheck } from "lucide-react";
+import { CheckCircle, Award, Users, Globe, TrendingUp, ShieldCheck, FileText, Download } from "lucide-react";
 
 const About = () => {
   useEffect(() => {
@@ -184,6 +184,44 @@ const About = () => {
                 <Award className="h-12 w-12 mx-auto mb-4 text-primary" />
                 <h3 className="text-lg font-merriweather font-bold text-primary mb-2">APEDA</h3>
                 <p className="text-foreground text-sm">Agricultural & Processed Food Products Export Development Authority</p>
+              </div>
+            </div>
+          </div>
+          
+          {/* GST Certificate */}
+          <div className="mb-16">
+            <h2 className="section-title text-3xl font-merriweather font-bold text-primary mb-8 text-center">
+              Business Documents
+            </h2>
+            <div className="max-w-2xl mx-auto">
+              <div className="bg-gray-light p-8 rounded-lg border border-gray-300">
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center">
+                    <FileText className="h-10 w-10 text-primary mr-4" />
+                    <div>
+                      <h3 className="text-xl font-merriweather font-bold text-primary">GST Certificate</h3>
+                      <p className="text-foreground">Goods and Services Tax Registration</p>
+                    </div>
+                  </div>
+                  <a 
+                    href="/assets/certificates/gst_certificate.pdf" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center bg-secondary hover:bg-secondary-light text-white font-semibold py-2 px-4 rounded-md transition duration-300"
+                  >
+                    <Download className="h-4 w-4 mr-2" />
+                    Download
+                  </a>
+                </div>
+                <div className="bg-white p-4 rounded-md border border-gray-300">
+                  <div className="aspect-w-16 aspect-h-12 border border-gray-300 rounded-md overflow-hidden">
+                    <iframe 
+                      src="/assets/certificates/gst_certificate.pdf" 
+                      className="w-full h-[400px]" 
+                      title="GST Certificate Preview"
+                    ></iframe>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

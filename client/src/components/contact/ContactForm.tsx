@@ -53,9 +53,9 @@ const ContactForm = () => {
   });
 
   // Store EmailJS credentials
-  const serviceId = process.env.EMAILJS_SERVICE_ID || "";
-  const templateId = process.env.EMAILJS_TEMPLATE_ID || "";
-  const publicKey = process.env.EMAILJS_PUBLIC_KEY || "";
+  const serviceId = import.meta.env.EMAILJS_SERVICE_ID || "";
+  const templateId = import.meta.env.EMAILJS_TEMPLATE_ID || "";
+  const publicKey = import.meta.env.EMAILJS_PUBLIC_KEY || "";
 
   // Initialize EmailJS
   emailjs.init(publicKey);
