@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
 import { useQuery } from "@tanstack/react-query";
 import ProductCard from "./ProductCard";
-import { Clock } from "lucide-react";
+import { Clock, Search, Filter } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
+import { Input } from "@/components/ui/input";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Label } from "@/components/ui/label";
 
 interface ProductTabsProps {
   activeTab: 'export' | 'import';
@@ -15,13 +18,32 @@ const ProductTabs = ({ activeTab, onTabChange }: ProductTabsProps) => {
     queryKey: ['/api/products'],
   });
 
-  const exportProducts = products?.filter(product => product.type === 'export') || [];
-  const importProducts = products?.filter(product => product.type === 'import') || [];
+  // Search and filtering state
+  const [searchTerm, setSearchTerm] = useState('');
+  const [categoryFilter, setCategoryFilter] = useState('all');
+  
+  // Extract all categories
+  const allCategories = products ? 
+    [...new Set(products.map(product => product.category))] : 
+    [];
+
+  // Filter products based on search term, category, and type
+  const filterProducts = (products = []) => {
+    return products.filter(product => {
+      const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
+                           product.description.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesCategory = categoryFilter === 'all' || product.category === categoryFilter;
+      return matchesSearch && matchesCategory;
+    });
+  };
+
+  const exportProducts = filterProducts(products?.filter(product => product.type === 'export') || []);
+  const importProducts = filterProducts(products?.filter(product => product.type === 'import') || []);
   
   return (
     <>
       {/* Tabs */}
-      <div className="flex justify-center mb-12">
+      <div className="flex justify-center mb-8">
         <div className="inline-flex rounded-md shadow-sm" role="group">
           <button 
             type="button" 
@@ -47,6 +69,50 @@ const ProductTabs = ({ activeTab, onTabChange }: ProductTabsProps) => {
           >
             Import Products
           </button>
+        </div>
+      </div>
+      
+      {/* Search and Filter */}
+      <div className="mb-12">
+        <div className="grid md:grid-cols-3 gap-6">
+          {/* Search */}
+          <div className="md:col-span-2">
+            <div className="relative">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
+              <Input
+                type="text"
+                placeholder="Search products by name or description..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="pl-10 py-6"
+              />
+            </div>
+          </div>
+          
+          {/* Category Filter */}
+          <div>
+            <div className="space-y-2">
+              <Label htmlFor="category-filter" className="text-sm font-medium">
+                Filter by Category
+              </Label>
+              <Select
+                value={categoryFilter}
+                onValueChange={setCategoryFilter}
+              >
+                <SelectTrigger id="category-filter" className="w-full">
+                  <SelectValue placeholder="All Categories" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="all">All Categories</SelectItem>
+                  {allCategories.map((category) => (
+                    <SelectItem key={category} value={category}>
+                      {category.charAt(0).toUpperCase() + category.slice(1)}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
         </div>
       </div>
       

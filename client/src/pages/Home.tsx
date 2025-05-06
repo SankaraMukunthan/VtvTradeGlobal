@@ -55,7 +55,7 @@ const Home = () => {
                 <img 
                   src="/attached_assets/ceo.jpg" 
                   alt="Venu Gopal V - Founder & CEO" 
-                  className="w-full h-auto rounded-lg shadow-xl object-cover"
+                  className="w-full h-auto rounded-lg shadow-xl object-cover object-top"
                   style={{ height: "500px" }}
                 />
                 <div className="absolute -bottom-6 -right-6 bg-secondary p-4 rounded-lg shadow-lg hidden md:block">

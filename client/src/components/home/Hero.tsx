@@ -6,7 +6,7 @@ const Hero = () => {
     <section id="home" className="relative h-screen flex items-center">
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://images.unsplash.com/photo-1595829357667-7c31136c8cca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80" 
+          src="/attached_assets/image_1746514439522.png" 
           alt="Global agricultural trading" 
           className="w-full h-full object-cover" 
         />
