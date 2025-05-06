@@ -13,8 +13,18 @@ interface ProductTabsProps {
   onTabChange: (tab: 'export' | 'import') => void;
 }
 
+interface Product {
+  id: number;
+  name: string;
+  description: string;
+  imageUrl: string;
+  category: string;
+  type: 'export' | 'import';
+  slug: string;
+}
+
 const ProductTabs = ({ activeTab, onTabChange }: ProductTabsProps) => {
-  const { data: products, isLoading } = useQuery({
+  const { data: products, isLoading } = useQuery<Product[]>({
     queryKey: ['/api/products'],
   });
 
@@ -24,12 +34,12 @@ const ProductTabs = ({ activeTab, onTabChange }: ProductTabsProps) => {
   
   // Extract all categories
   const allCategories = products ? 
-    [...new Set(products.map(product => product.category))] : 
+    [...new Set(products.map((product: Product) => product.category))] : 
     [];
 
   // Filter products based on search term, category, and type
-  const filterProducts = (products = []) => {
-    return products.filter(product => {
+  const filterProducts = (productList: Product[] = []) => {
+    return productList.filter(product => {
       const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
                            product.description.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = categoryFilter === 'all' || product.category === categoryFilter;

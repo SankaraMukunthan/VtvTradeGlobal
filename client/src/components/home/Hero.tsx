@@ -6,8 +6,8 @@ const Hero = () => {
     <section id="home" className="relative h-screen flex items-center">
       <div className="absolute inset-0 z-0">
         <img 
-          src="/attached_assets/image_1746514439522.png" 
-          alt="Global agricultural trading" 
+          src="/attached_assets/hero_section.png" 
+          alt="Global agricultural trading and shipping" 
           className="w-full h-full object-cover" 
         />
         <div className="hero-overlay absolute inset-0"></div>
