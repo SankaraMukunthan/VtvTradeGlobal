@@ -1,10 +1,15 @@
 import type { Express } from "express";
+import express from "express";
+import path from "path";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
 import { contactFormSchema } from "@shared/schema";
 import { ZodError } from "zod";
 
 export async function registerRoutes(app: Express): Promise<Server> {
+  // Serve static files from the public directory
+  app.use('/assets', express.static(path.join(process.cwd(), 'public/assets')));
+  
   // API prefix
   const apiPrefix = "/api";
 
