@@ -96,7 +96,7 @@ const About = () => {
               <div className="text-center">
                 <div className="relative mb-4 inline-block">
                   <img 
-                    src="/assets/team/ceo.jpg" 
+                    src="/attached_assets/ceo.jpg" 
                     alt="Venu Gopal V" 
                     className="w-56 h-56 object-cover rounded-full mx-auto"
                   />
@@ -114,7 +114,7 @@ const About = () => {
               <div className="text-center">
                 <div className="relative mb-4 inline-block">
                   <img 
-                    src="/assets/team/arun_raj.jpg" 
+                    src="/attached_assets/arun_raj.jpg" 
                     alt="Arun Raj" 
                     className="w-56 h-56 object-cover rounded-full mx-auto"
                   />
@@ -167,24 +167,25 @@ const About = () => {
               Business Information
             </h2>
             <div className="max-w-2xl mx-auto">
-              {/* GST Certificate */}
+              {/* GST Registration Info */}
               <div className="bg-gray-light p-8 rounded-lg border border-gray-300 mb-8">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center">
-                    <FileText className="h-10 w-10 text-primary mr-4" />
-                    <div>
-                      <h3 className="text-xl font-merriweather font-bold text-primary">GST Certificate</h3>
-                      <p className="text-foreground">Goods and Services Tax Registration</p>
+                <div className="flex items-start">
+                  <FileText className="h-10 w-10 text-primary mr-4 mt-1" />
+                  <div>
+                    <h3 className="text-xl font-merriweather font-bold text-primary mb-2">GST Registration</h3>
+                    <p className="text-foreground mb-4">Registered under Goods and Services Tax</p>
+                    
+                    <div className="grid md:grid-cols-2 gap-x-6 gap-y-3 mb-2">
+                      <div>
+                        <p className="text-sm font-medium text-gray-500">Business Name</p>
+                        <p className="font-semibold">VTV Enterprises</p>
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium text-gray-500">Registration Type</p>
+                        <p className="font-semibold">Regular</p>
+                      </div>
                     </div>
                   </div>
-                  <a 
-                    href="/assets/certificates/gst_certificate.pdf" 
-                    download
-                    className="flex items-center bg-secondary hover:bg-secondary-light text-white font-semibold py-2 px-4 rounded-md transition duration-300"
-                  >
-                    <Download className="h-4 w-4 mr-2" />
-                    Download
-                  </a>
                 </div>
               </div>
               

@@ -110,12 +110,7 @@ const Contact = () => {
                 </CardContent>
               </Card>
               
-              <Card>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-merriweather font-bold text-primary mb-4">Connect With Us</h3>
-                  {/* Social media links removed as requested */}
-                </CardContent>
-              </Card>
+
             </div>
           </div>
         </div>
