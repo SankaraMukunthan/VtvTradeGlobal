@@ -72,32 +72,32 @@ const Footer = () => {
             <h3 className="text-lg font-merriweather font-bold mb-6">Our Products</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="/products#turmeric" className="text-white/80 hover:text-secondary transition duration-300">
-                  Turmeric
+                <Link href="/products#export" className="text-white/80 hover:text-secondary transition duration-300">
+                  Turmeric (Haldi)
                 </Link>
               </li>
               <li>
-                <Link href="/products#rice" className="text-white/80 hover:text-secondary transition duration-300">
-                  Basmati Rice
+                <Link href="/products#export" className="text-white/80 hover:text-secondary transition duration-300">
+                  Rice
                 </Link>
               </li>
               <li>
-                <Link href="/products#spices" className="text-white/80 hover:text-secondary transition duration-300">
-                  Spices
+                <Link href="/products#export" className="text-white/80 hover:text-secondary transition duration-300">
+                  Pulses (Toor, Urad, Moong)
                 </Link>
               </li>
               <li>
-                <Link href="/products#pulses" className="text-white/80 hover:text-secondary transition duration-300">
-                  Pulses
+                <Link href="/products#export" className="text-white/80 hover:text-secondary transition duration-300">
+                  Nuts (Groundnut, Cashew)
                 </Link>
               </li>
               <li>
-                <Link href="/products#nuts" className="text-white/80 hover:text-secondary transition duration-300">
-                  Nuts
+                <Link href="/products#export" className="text-white/80 hover:text-secondary transition duration-300">
+                  Sugar & Salt
                 </Link>
               </li>
               <li>
-                <Link href="/products#gumDamar" className="text-white/80 hover:text-secondary transition duration-300">
+                <Link href="/products#import" className="text-white/80 hover:text-secondary transition duration-300">
                   Gum Damar
                 </Link>
               </li>

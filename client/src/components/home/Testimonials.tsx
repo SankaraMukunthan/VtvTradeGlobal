@@ -9,25 +9,18 @@ const Testimonials = () => {
   // Default testimonials in case API fails or is loading
   const defaultTestimonials = [
     {
-      id: 1,
-      quote: "VTV Enterprises has been our trusted supplier of premium turmeric for over 5 years. Their quality is consistently excellent, and their logistics support makes international sourcing seamless.",
-      name: "John Doering",
-      title: "Procurement Manager, European Spice Imports",
-      initials: "JD"
-    },
-    {
       id: 2,
       quote: "We appreciate VTV's commitment to quality and reliability. Their documentation expertise and compliance knowledge have made importing Gum Damar into India a smooth process for our business.",
-      name: "Rajesh Patel",
-      title: "Director, Mumbai Pharmaceuticals",
-      initials: "RP"
+      name: "Subramanian",
+      title: "Andhra",
+      initials: "S"
     },
     {
       id: 3,
-      quote: "The premium quality of Indian rice supplied by VTV Enterprises has helped our restaurant chain maintain its reputation for authentic flavors. Their service is as exceptional as their products.",
-      name: "Sarah Lee",
-      title: "Executive Chef, Asian Culinary Group",
-      initials: "SL"
+      quote: "VTV Enterprises has been our trusted supplier of premium turmeric for over 5 years. Their quality is consistently excellent, and their logistics support makes international sourcing seamless.",
+      name: "Sankara Mukunthan",
+      title: "Chennai",
+      initials: "SM"
     }
   ];
 
