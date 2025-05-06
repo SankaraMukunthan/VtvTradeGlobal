@@ -105,18 +105,18 @@ const About = () => {
               <div className="text-center">
                 <div className="relative mb-4 inline-block">
                   <img 
-                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&q=80" 
-                    alt="Vikram Tanwar" 
+                    src="/assets/team/ceo.jpg" 
+                    alt="Venu Gopal V" 
                     className="w-56 h-56 object-cover rounded-full mx-auto"
                   />
                   <div className="absolute bottom-0 right-0 bg-primary rounded-full p-2">
                     <Users className="h-5 w-5 text-white" />
                   </div>
                 </div>
-                <h3 className="text-xl font-merriweather font-bold text-primary mb-1">Vikram Tanwar</h3>
+                <h3 className="text-xl font-merriweather font-bold text-primary mb-1">Venu Gopal V</h3>
                 <p className="text-secondary font-semibold mb-3">Founder & CEO</p>
                 <p className="text-foreground text-sm">
-                  With over 15 years in international trade, Vikram's vision and leadership have been instrumental 
+                  With over 15 years in international trade, Venu Gopal's vision and leadership have been instrumental 
                   in VTV's growth and success.
                 </p>
               </div>
