@@ -195,7 +195,7 @@ const About = () => {
             </h2>
             <div className="max-w-2xl mx-auto">
               <div className="bg-gray-light p-8 rounded-lg border border-gray-300">
-                <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center justify-between">
                   <div className="flex items-center">
                     <FileText className="h-10 w-10 text-primary mr-4" />
                     <div>
@@ -205,22 +205,12 @@ const About = () => {
                   </div>
                   <a 
                     href="/assets/certificates/gst_certificate.pdf" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
+                    download
                     className="flex items-center bg-secondary hover:bg-secondary-light text-white font-semibold py-2 px-4 rounded-md transition duration-300"
                   >
                     <Download className="h-4 w-4 mr-2" />
                     Download
                   </a>
-                </div>
-                <div className="bg-white p-4 rounded-md border border-gray-300">
-                  <div className="aspect-w-16 aspect-h-12 border border-gray-300 rounded-md overflow-hidden">
-                    <iframe 
-                      src="/assets/certificates/gst_certificate.pdf" 
-                      className="w-full h-[400px]" 
-                      title="GST Certificate Preview"
-                    ></iframe>
-                  </div>
                 </div>
               </div>
             </div>
