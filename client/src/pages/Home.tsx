@@ -53,9 +53,9 @@ const Home = () => {
             <div className="md:w-1/2">
               <div className="relative">
                 <img 
-                  src="/attached_assets/ceo.jpg" 
+                  src="/attached_assets/ceo_cropped.jpg" 
                   alt="Venu Gopal V - Founder & CEO" 
-                  className="w-full h-auto rounded-lg shadow-xl object-cover object-top"
+                  className="w-full h-auto rounded-lg shadow-xl object-cover"
                   style={{ height: "500px" }}
                 />
                 <div className="absolute -bottom-6 -right-6 bg-secondary p-4 rounded-lg shadow-lg hidden md:block">
