@@ -7,8 +7,9 @@ import { contactFormSchema } from "@shared/schema";
 import { ZodError } from "zod";
 
 export async function registerRoutes(app: Express): Promise<Server> {
-  // Serve static files from the public directory
+  // Serve static files from the public and attached_assets directories
   app.use('/assets', express.static(path.join(process.cwd(), 'public/assets')));
+  app.use('/attached_assets', express.static(path.join(process.cwd(), 'attached_assets')));
   
   // API prefix
   const apiPrefix = "/api";
