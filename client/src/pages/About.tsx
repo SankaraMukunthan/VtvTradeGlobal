@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Card } from "@/components/ui/card";
 import { Link } from "wouter";
-import { CheckCircle, Award, Users, Globe, TrendingUp, ShieldCheck, FileText, Download } from "lucide-react";
+import { CheckCircle, Award, Users, Globe, TrendingUp, ShieldCheck, FileText, Download, Building2, CreditCard } from "lucide-react";
 
 const About = () => {
   useEffect(() => {
@@ -188,13 +188,14 @@ const About = () => {
             </div>
           </div>
           
-          {/* GST Certificate */}
+          {/* Business Information */}
           <div className="mb-16">
             <h2 className="section-title text-3xl font-merriweather font-bold text-primary mb-8 text-center">
-              Business Documents
+              Business Information
             </h2>
             <div className="max-w-2xl mx-auto">
-              <div className="bg-gray-light p-8 rounded-lg border border-gray-300">
+              {/* GST Certificate */}
+              <div className="bg-gray-light p-8 rounded-lg border border-gray-300 mb-8">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">
                     <FileText className="h-10 w-10 text-primary mr-4" />
@@ -211,6 +212,36 @@ const About = () => {
                     <Download className="h-4 w-4 mr-2" />
                     Download
                   </a>
+                </div>
+              </div>
+              
+              {/* Bank Account Details */}
+              <div className="bg-gray-light p-8 rounded-lg border border-gray-300">
+                <div className="flex items-start mb-4">
+                  <Building2 className="h-10 w-10 text-primary mr-4 mt-1" />
+                  <div>
+                    <h3 className="text-xl font-merriweather font-bold text-primary mb-2">Bank Account Details</h3>
+                    <p className="text-foreground mb-4">For business transactions and payments</p>
+                    
+                    <div className="grid md:grid-cols-2 gap-x-6 gap-y-3">
+                      <div>
+                        <p className="text-sm font-medium text-gray-500">Account Holder Name</p>
+                        <p className="font-semibold">VENU GOPAL R</p>
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium text-gray-500">Account Number</p>
+                        <p className="font-semibold">4196839713</p>
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium text-gray-500">Bank Name</p>
+                        <p className="font-semibold">Indian Bank</p>
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium text-gray-500">IFSC Code</p>
+                        <p className="font-semibold">IDIB000M032</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
