@@ -27,46 +27,37 @@ const About = () => {
       {/* Main Content */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-            <div>
-              <h2 className="section-title text-3xl font-merriweather font-bold text-primary mb-6">
-                Who We Are
-              </h2>
-              <p className="text-foreground mb-6">
-                Founded in 2013, VTV Enterprises began with a simple mission: to showcase the finest 
-                agricultural products from India to the world. What started as a small export business 
-                has grown into a trusted global trading company with operations spanning across continents.
-              </p>
-              <p className="text-foreground mb-6">
-                Our commitment to quality, transparency, and customer satisfaction has helped us build lasting 
-                relationships with clients in over 25 countries. We take pride in our role as ambassadors of 
-                Indian agriculture while also bringing select premium products to the Indian market.
-              </p>
-              <div className="grid grid-cols-2 gap-4 mt-8">
-                <div className="flex items-center">
-                  <CheckCircle className="text-primary h-6 w-6 mr-2" />
-                  <span className="text-foreground">Quality Focused</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="text-primary h-6 w-6 mr-2" />
-                  <span className="text-foreground">Customer Centric</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="text-primary h-6 w-6 mr-2" />
-                  <span className="text-foreground">Sustainable Practices</span>
-                </div>
-                <div className="flex items-center">
-                  <CheckCircle className="text-primary h-6 w-6 mr-2" />
-                  <span className="text-foreground">Global Reach</span>
-                </div>
+          <div className="max-w-4xl mx-auto mb-16">
+            <h2 className="section-title text-3xl font-merriweather font-bold text-primary mb-6 text-center">
+              Who We Are
+            </h2>
+            <p className="text-foreground mb-6 text-center">
+              Founded in 2013, VTV Enterprises began with a simple mission: to showcase the finest 
+              agricultural products from India to the world. What started as a small export business 
+              has grown into a trusted global trading company with operations spanning across continents.
+            </p>
+            <p className="text-foreground mb-8 text-center">
+              Our commitment to quality, transparency, and customer satisfaction has helped us build lasting 
+              relationships with clients in over 25 countries. We take pride in our role as ambassadors of 
+              Indian agriculture while also bringing select premium products to the Indian market.
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+              <div className="flex items-center">
+                <CheckCircle className="text-primary h-6 w-6 mr-2" />
+                <span className="text-foreground">Quality Focused</span>
               </div>
-            </div>
-            <div>
-              <img 
-                src="https://images.unsplash.com/photo-1588964895597-cfccd6e2dbf9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" 
-                alt="VTV Enterprises Office" 
-                className="rounded-lg shadow-lg w-full h-auto"
-              />
+              <div className="flex items-center">
+                <CheckCircle className="text-primary h-6 w-6 mr-2" />
+                <span className="text-foreground">Customer Centric</span>
+              </div>
+              <div className="flex items-center">
+                <CheckCircle className="text-primary h-6 w-6 mr-2" />
+                <span className="text-foreground">Sustainable Practices</span>
+              </div>
+              <div className="flex items-center">
+                <CheckCircle className="text-primary h-6 w-6 mr-2" />
+                <span className="text-foreground">Global Reach</span>
+              </div>
             </div>
           </div>
 
@@ -101,7 +92,7 @@ const About = () => {
             <h2 className="section-title text-3xl font-merriweather font-bold text-primary mb-8 text-center">
               Our Leadership Team
             </h2>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="relative mb-4 inline-block">
                   <img 
@@ -123,37 +114,19 @@ const About = () => {
               <div className="text-center">
                 <div className="relative mb-4 inline-block">
                   <img 
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&q=80" 
-                    alt="Priya Sharma" 
+                    src="/assets/team/arun_raj.jpg" 
+                    alt="Arun Raj" 
                     className="w-56 h-56 object-cover rounded-full mx-auto"
                   />
                   <div className="absolute bottom-0 right-0 bg-primary rounded-full p-2">
                     <Globe className="h-5 w-5 text-white" />
                   </div>
                 </div>
-                <h3 className="text-xl font-merriweather font-bold text-primary mb-1">Priya Sharma</h3>
-                <p className="text-secondary font-semibold mb-3">Director of Operations</p>
+                <h3 className="text-xl font-merriweather font-bold text-primary mb-1">Arun Raj</h3>
+                <p className="text-secondary font-semibold mb-3">Manager</p>
                 <p className="text-foreground text-sm">
-                  Priya's expertise in logistics and supply chain management ensures smooth operations 
+                  Arun's expertise in logistics and supply chain management ensures smooth operations 
                   across our global network.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="relative mb-4 inline-block">
-                  <img 
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&q=80" 
-                    alt="Rajiv Patel" 
-                    className="w-56 h-56 object-cover rounded-full mx-auto"
-                  />
-                  <div className="absolute bottom-0 right-0 bg-primary rounded-full p-2">
-                    <ShieldCheck className="h-5 w-5 text-white" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-merriweather font-bold text-primary mb-1">Rajiv Patel</h3>
-                <p className="text-secondary font-semibold mb-3">Quality Assurance Director</p>
-                <p className="text-foreground text-sm">
-                  Rajiv's dedication to maintaining the highest quality standards has earned VTV its reputation 
-                  for excellence in product quality.
                 </p>
               </div>
             </div>
