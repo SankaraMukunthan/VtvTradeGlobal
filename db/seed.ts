@@ -13,57 +13,102 @@ async function seed() {
       // Export Products
       const exportProducts = [
         {
-          name: "Premium Turmeric",
-          description: "High-curcumin, organically grown turmeric from the fertile soils of Southern India.",
+          name: "Haldi (Turmeric)",
+          description: "Premium quality turmeric with high curcumin content, organically grown in the fertile soils of Southern India.",
           type: "export",
           category: "spices",
-          imageUrl: "https://images.unsplash.com/photo-1615485500704-8e990f9900f7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80",
-          slug: "premium-turmeric",
+          imageUrl: "/assets/products/haldi.png",
+          slug: "haldi-turmeric",
           featured: true
         },
         {
-          name: "Aromatic Basmati Rice",
-          description: "Long-grain, aromatic basmati rice from the foothills of the Himalayas.",
-          type: "export",
-          category: "rice",
-          imageUrl: "https://images.unsplash.com/photo-1550828520-4cb496926fc9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80",
-          slug: "aromatic-basmati-rice",
-          featured: true
-        },
-        {
-          name: "Organic Spices",
-          description: "A diverse range of authentic Indian spices including cardamom, cloves, and cinnamon.",
+          name: "Chilli Powder",
+          description: "Vibrant red chilli powder with the perfect balance of heat and flavor, ideal for culinary applications worldwide.",
           type: "export",
           category: "spices",
-          imageUrl: "https://images.unsplash.com/photo-1596359900106-7918e73e1890?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80",
-          slug: "organic-spices",
+          imageUrl: "/assets/products/chilli_powder.png",
+          slug: "chilli-powder",
           featured: true
         },
         {
-          name: "Premium Pulses",
-          description: "High-protein lentils, chickpeas, and a variety of beans from different growing regions.",
+          name: "Urad Dal",
+          description: "Premium quality white lentils known for their creamy texture and mild flavor, used in various Indian dishes and preparations.",
           type: "export",
           category: "pulses",
-          imageUrl: "https://images.unsplash.com/photo-1523916421519-98d99e188c5e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80",
-          slug: "premium-pulses",
+          imageUrl: "/assets/products/urad_dal.png",
+          slug: "urad-dal",
           featured: false
         },
         {
-          name: "Assorted Nuts",
-          description: "A selection of cashews, almonds, and other premium nuts grown in ideal conditions.",
+          name: "Toor Dal",
+          description: "High-quality yellow lentils that are a staple in Indian kitchens, perfect for making delicious and nutritious soups and curries.",
+          type: "export",
+          category: "pulses",
+          imageUrl: "/assets/products/toor_dal.png",
+          slug: "toor-dal",
+          featured: false
+        },
+        {
+          name: "Premium Rice",
+          description: "Long-grain, aromatic rice varieties cultivated in the finest growing regions of India, known for perfect texture and taste.",
+          type: "export",
+          category: "rice",
+          imageUrl: "/assets/products/rice.png",
+          slug: "premium-rice",
+          featured: true
+        },
+        {
+          name: "Ground Nut",
+          description: "Nutrient-rich peanuts grown in premium agricultural conditions, perfect for snacking or food manufacturing applications.",
           type: "export",
           category: "nuts",
-          imageUrl: "https://images.unsplash.com/photo-1599707345883-60c34cc3d6af?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80",
-          slug: "assorted-nuts",
+          imageUrl: "/assets/products/peanut.png",
+          slug: "ground-nut",
           featured: false
         },
         {
-          name: "Fresh Produce",
-          description: "Seasonal fruits and vegetables carefully selected for export markets.",
+          name: "Moong Dal",
+          description: "Highly nutritious split yellow mung beans that cook quickly and offer excellent protein content for healthy eating.",
           type: "export",
-          category: "fresh-produce",
-          imageUrl: "https://images.unsplash.com/photo-1579113800032-c38bd7635818?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80",
-          slug: "fresh-produce",
+          category: "pulses",
+          imageUrl: "/assets/products/moong_dal.png",
+          slug: "moong-dal",
+          featured: false
+        },
+        {
+          name: "Sugar",
+          description: "Pure, refined sugar crystals processed to exacting standards for use in food and beverage industries worldwide.",
+          type: "export",
+          category: "sweeteners",
+          imageUrl: "/assets/products/sugar.png",
+          slug: "sugar",
+          featured: false
+        },
+        {
+          name: "Tamarind",
+          description: "Tangy, flavorful tamarind with rich brown color and perfect moisture content for culinary and industrial applications.",
+          type: "export",
+          category: "fruits",
+          imageUrl: "/assets/products/tamarind.png",
+          slug: "tamarind",
+          featured: false
+        },
+        {
+          name: "Cashew Nuts",
+          description: "Premium quality, creamy cashew nuts harvested at peak ripeness from the finest growing regions of India.",
+          type: "export",
+          category: "nuts",
+          imageUrl: "/assets/products/cashew.png",
+          slug: "cashew-nuts",
+          featured: true
+        },
+        {
+          name: "Salt",
+          description: "Fine-quality salt with optimal mineral content, harvested using traditional methods for superior taste and purity.",
+          type: "export",
+          category: "spices",
+          imageUrl: "/assets/products/salt.png",
+          slug: "salt",
           featured: false
         }
       ];
@@ -72,10 +117,10 @@ async function seed() {
       const importProducts = [
         {
           name: "Gum Damar",
-          description: "High-quality resin used in various industries including food, pharmaceuticals, and cosmetics.",
+          description: "High-quality natural resin used in various industries including food, pharmaceuticals, cosmetics, and varnishes.",
           type: "import",
           category: "resins",
-          imageUrl: "https://images.unsplash.com/photo-1603143285586-6381819de2e5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80",
+          imageUrl: "/assets/products/gum_damar.jpg",
           slug: "gum-damar",
           featured: true
         }
