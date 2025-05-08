@@ -48,8 +48,8 @@ const Contact = () => {
                       <div className="ml-4">
                         <h4 className="font-semibold text-foreground">Corporate Office</h4>
                         <p className="text-foreground">
-                          No 63, First Floor Alagiri Nagar East Street<br />
-                          Vadapalani, Chennai 600026<br />
+                          No 1022, Nehru Street, Vellore<br />
+                          Kadapperi, Tamil Nadu 632508<br />
                           India
                         </p>
                       </div>

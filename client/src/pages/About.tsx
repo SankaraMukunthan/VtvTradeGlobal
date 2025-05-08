@@ -186,7 +186,7 @@ const About = () => {
               <div>
                 <div className="bg-gray-light p-8 rounded-lg border border-gray-300 h-full">
                   <h3 className="text-xl font-merriweather font-bold text-primary mb-6">Certifications & Standards</h3>
-                  <div className="grid grid-cols-2 gap-6">
+                  <div className="grid grid-cols-2 gap-6 mb-6">
                     <div className="text-center">
                       <Award className="h-12 w-12 mx-auto mb-4 text-primary" />
                       <h4 className="font-merriweather font-bold text-primary mb-1">ISO 9001:2015</h4>
@@ -206,6 +206,39 @@ const About = () => {
                       <Award className="h-12 w-12 mx-auto mb-4 text-primary" />
                       <h4 className="font-merriweather font-bold text-primary mb-1">APEDA</h4>
                       <p className="text-foreground text-sm">Agricultural & Processed Food Products Export Development Authority</p>
+                    </div>
+                  </div>
+                  
+                  <h4 className="font-merriweather font-bold text-primary mb-4">Official Documents</h4>
+                  <div className="grid grid-cols-1 gap-4">
+                    <div className="bg-white p-4 rounded-lg border border-gray-200 hover:shadow-md transition duration-300">
+                      <a href="/attached_assets/Iec_certificate.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                        <FileText className="h-6 w-6 text-primary mr-3" />
+                        <div>
+                          <p className="font-semibold text-primary">IEC Certificate</p>
+                          <p className="text-sm text-foreground">Importer-Exporter Code: ALFPV5491E</p>
+                        </div>
+                      </a>
+                    </div>
+                    
+                    <div className="bg-white p-4 rounded-lg border border-gray-200 hover:shadow-md transition duration-300">
+                      <a href="/attached_assets/aadhar_card.jpg" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                        <FileText className="h-6 w-6 text-primary mr-3" />
+                        <div>
+                          <p className="font-semibold text-primary">Aadhaar Card</p>
+                          <p className="text-sm text-foreground">Government of India ID: 6885 0016 9734</p>
+                        </div>
+                      </a>
+                    </div>
+                    
+                    <div className="bg-white p-4 rounded-lg border border-gray-200 hover:shadow-md transition duration-300">
+                      <a href="/attached_assets/gst_certificate.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                        <FileText className="h-6 w-6 text-primary mr-3" />
+                        <div>
+                          <p className="font-semibold text-primary">GST Certificate</p>
+                          <p className="text-sm text-foreground">Goods and Services Tax Registration</p>
+                        </div>
+                      </a>
                     </div>
                   </div>
                 </div>
