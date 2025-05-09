@@ -110,7 +110,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex">
                 <MapPinIcon className="h-5 w-5 mt-1 mr-3 text-secondary flex-shrink-0" />
-                <span className="text-white/80">No 63, First Floor Alagiri Nagar East Street, Vadapalani, Chennai 600026, India</span>
+                <span className="text-white/80">No 1022, Nehru Street, Vellore, Kadapperi, Kadapperi, Kadaperi, Tamil Nadu, India, 632508</span>
               </li>
               <li className="flex">
                 <PhoneIcon className="h-5 w-5 mt-1 mr-3 text-secondary flex-shrink-0" />
