@@ -146,6 +146,36 @@ const About = () => {
                           <p className="text-sm font-medium text-gray-500">Registration Type</p>
                           <p className="font-semibold">Regular</p>
                         </div>
+                        <div>
+                          <p className="text-sm font-medium text-gray-500">GSTIN</p>
+                          <p className="font-semibold">33ALFPV5491E1ZW</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Import Export Code Info */}
+                <div className="bg-gray-light p-8 rounded-lg border border-gray-300 mb-8">
+                  <div className="flex items-start">
+                    <Globe className="h-10 w-10 text-primary mr-4 mt-1" />
+                    <div>
+                      <h3 className="text-xl font-merriweather font-bold text-primary mb-2">Import Export Code</h3>
+                      <p className="text-foreground mb-4">Registered under Directorate General of Foreign Trade</p>
+                      
+                      <div className="grid md:grid-cols-2 gap-x-6 gap-y-3 mb-2">
+                        <div>
+                          <p className="text-sm font-medium text-gray-500">Business Name</p>
+                          <p className="font-semibold">VTV Enterprises</p>
+                        </div>
+                        <div>
+                          <p className="text-sm font-medium text-gray-500">IEC Number</p>
+                          <p className="font-semibold">ALFPV5491E</p>
+                        </div>
+                        <div>
+                          <p className="text-sm font-medium text-gray-500">Issue Date</p>
+                          <p className="font-semibold">08/04/2019</p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -162,7 +192,7 @@ const About = () => {
                       <div className="grid md:grid-cols-2 gap-x-6 gap-y-3">
                         <div>
                           <p className="text-sm font-medium text-gray-500">Account Holder Name</p>
-                          <p className="font-semibold">VENU GOPAL R</p>
+                          <p className="font-semibold">VENU GOPAL V</p>
                         </div>
                         <div>
                           <p className="text-sm font-medium text-gray-500">Account Number</p>
