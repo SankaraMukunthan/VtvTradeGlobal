@@ -14,12 +14,12 @@ const GoogleMap = () => {
     // Function to initialize the map
     const initializeMap = () => {
       if (window.google && mapRef.current) {
-        // Chennai Vadapalani coordinates
-        const chennai = { lat: 13.0490, lng: 80.2154 };
+        // Vellore Kadapperi coordinates
+        const vellore = { lat: 12.9165, lng: 79.1325 };
         
         // Create map
         const map = new window.google.maps.Map(mapRef.current, {
-          center: chennai,
+          center: vellore,
           zoom: 15,
           styles: [
             {
@@ -67,7 +67,7 @@ const GoogleMap = () => {
         
         // Add marker
         const marker = new window.google.maps.Marker({
-          position: chennai,
+          position: vellore,
           map: map,
           title: 'VTV Enterprises'
         });
@@ -75,10 +75,10 @@ const GoogleMap = () => {
         // Add info window
         const infoWindow = new window.google.maps.InfoWindow({
           content: `
-            <div style="padding: 10px; max-width: 200px;">
+            <div style="padding: 10px; max-width: 250px;">
               <h3 style="margin-top: 0; color: #1B5E20; font-weight: bold;">VTV Enterprises</h3>
-              <p style="margin-bottom: 5px;">No 63, First Floor Alagiri Nagar East Street</p>
-              <p style="margin-bottom: 5px;">Vadapalani, Chennai 600026</p>
+              <p style="margin-bottom: 5px;">No 1022, Nehru Street, Vellore, Kadapperi</p>
+              <p style="margin-bottom: 5px;">Kadapperi, Kadaperi, Tamil Nadu 632508</p>
               <p style="margin-bottom: 0;">India</p>
             </div>
           `
