@@ -270,6 +270,16 @@ const About = () => {
                         </div>
                       </a>
                     </div>
+                    
+                    <div className="bg-white p-4 rounded-lg border border-gray-200 hover:shadow-md transition duration-300">
+                      <a href="/attached_assets/FSSAI LICENCE.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                        <FileText className="h-6 w-6 text-primary mr-3" />
+                        <div>
+                          <p className="font-semibold text-primary">FSSAI License</p>
+                          <p className="text-sm text-foreground">Food Safety and Standards Authority of India</p>
+                        </div>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
