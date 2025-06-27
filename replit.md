@@ -87,11 +87,37 @@ The application is designed for deployment on modern hosting platforms:
 3. **Database Setup**: `npm run db:push` for schema deployment
 4. **Seeding**: `npm run db:seed` for initial data population
 
+## Deployment
+
+The application is configured for deployment on Netlify with the following setup:
+
+### Files Added for Deployment
+- `netlify.toml` - Netlify configuration with build settings and redirects
+- `netlify/functions/api.js` - Serverless function for API routes
+- `build.sh` - Custom build script for Netlify
+- `.env.example` - Environment variables template
+- `LOCAL_SETUP.md` - Local development guide
+- `NETLIFY_DEPLOYMENT.md` - Step-by-step deployment guide
+- `scripts/setup-production-db.js` - Production database setup
+
+### Deployment Requirements
+1. Database hosting (Railway, Supabase, or Neon recommended)
+2. Environment variables configuration in Netlify
+3. EmailJS setup for contact forms
+4. Static file serving for attached assets
+
+### Build Process
+- Frontend: Vite builds React app to `dist/`
+- Assets: PDF documents and images copied to build directory
+- API: Serverless functions handle backend routes
+
 ## Changelog
 
 ```
 Changelog:
 - June 27, 2025. Initial setup
+- May 17, 2025. Added FSSAI license, updated business details
+- Current: Prepared for Netlify deployment with serverless functions
 ```
 
 ## User Preferences
