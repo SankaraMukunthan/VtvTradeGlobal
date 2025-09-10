@@ -1,0 +1,22 @@
+{
+  "testimonials": [
+    {
+      "name": "John Doering",
+      "title": "Procurement Manager, European Spice Imports",
+      "quote": "VTV Enterprises has been our trusted supplier of premium turmeric for over 5 years. Their quality is consistently excellent, and their logistics support makes international sourcing seamless.",
+      "initials": "JD"
+    },
+    {
+      "name": "Rajesh Patel",
+      "title": "Director, Mumbai Pharmaceuticals",
+      "quote": "We appreciate VTV's commitment to quality and reliability. Their documentation expertise and compliance knowledge have made importing Gum Damar into India a smooth process for our business.",
+      "initials": "RP"
+    },
+    {
+      "name": "Sarah Lee",
+      "title": "Executive Chef, Asian Culinary Group",
+      "quote": "The premium quality of Indian rice supplied by VTV Enterprises has helped our restaurant chain maintain its reputation for authentic flavors. Their service is as exceptional as their products.",
+      "initials": "SL"
+    }
+  ]
+}
