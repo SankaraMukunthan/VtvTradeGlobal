@@ -7,6 +7,11 @@
   NPM_FLAGS = "--legacy-peer-deps"
   CI = "false"
 
+# Configure secret scanning to ignore client-side environment variables
+[secrets]
+  # Ignore these specific environment variables from secret scanning
+  scan = { omit_keys = ["VITE_EMAILJS_PUBLIC_KEY", "VITE_EMAILJS_SERVICE_ID", "VITE_EMAILJS_TEMPLATE_ID"] }
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
