@@ -2,7 +2,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { useToast } from "@/hooks/use-toast";
-import emailjs from '@emailjs/browser';
 import { useState } from "react";
 
 import {
@@ -49,41 +48,45 @@ const ContactForm = () => {
     },
   });
 
-  // Initialize EmailJS with Vite environment variables
-  emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY || "");
-
   const sendEmail = async (data: FormValues) => {
     setIsSubmitting(true);
     try {
-      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-
-      if (!serviceId || !templateId || !publicKey) {
-        throw new Error('EmailJS configuration is missing. Please check your environment variables.');
-      }
-
-      await emailjs.send(
-        serviceId,
-        templateId,
-        {
-          to_email: "abiindo3333@gmail.com",
-          from_name: data.name,
-          from_email: data.email,
+      const response = await fetch('/.netlify/functions/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: data.name,
+          email: data.email,
           company: data.company,
           interest: getInterestLabel(data.interest),
           message: data.message,
-        },
-        publicKey
-      );
-      
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
       // Log successful submission
-      console.log("Contact form submitted:", data);
-      
-      return true;
+      console.log('Email sent successfully');
+      toast({
+        title: "Success!",
+        description: "Your message has been sent successfully.",
+      });
+
+      // Reset form
+      form.reset();
     } catch (error) {
       console.error('Error sending email:', error);
-      throw error;
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -101,18 +104,8 @@ const ContactForm = () => {
     try {
       setIsSubmitting(true);
       
-      // Send the email via EmailJS
-      const success = await sendEmail(data);
-      
-      if (success) {
-        // Show success message and reset form
-        toast({
-          title: "Message Sent!",
-          description: "Thank you for contacting us. We will get back to you shortly.",
-          variant: "default",
-        });
-        form.reset();
-      }
+      // Send the email via serverless function
+      await sendEmail(data);
     } catch (error) {
       // Show error message
       toast({
