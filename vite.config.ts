@@ -4,15 +4,20 @@ import { resolve } from 'path';
 
 export default defineConfig(({ mode }) => {
   // Load environment variables
-  const env = loadEnv(mode, process.cwd(), '');
-  
+  const env = {
+    ...process.env,
+    ...loadEnv(mode, process.cwd(), '')
+  };
+
   // Only include the environment variables we need in the client
   const clientEnv = {
     'import.meta.env.VITE_EMAILJS_PUBLIC_KEY': JSON.stringify(env.VITE_EMAILJS_PUBLIC_KEY),
     'import.meta.env.VITE_EMAILJS_SERVICE_ID': JSON.stringify(env.VITE_EMAILJS_SERVICE_ID),
     'import.meta.env.VITE_EMAILJS_TEMPLATE_ID': JSON.stringify(env.VITE_EMAILJS_TEMPLATE_ID),
+    'import.meta.env.PROD': mode === 'production',
+    'import.meta.env.DEV': mode !== 'production'
   };
-  
+
   return {
     plugins: [react()],
     define: clientEnv,

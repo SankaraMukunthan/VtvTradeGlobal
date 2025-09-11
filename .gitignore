@@ -10,7 +10,7 @@ lerna-debug.log*
 # Environment files
 .env
 .env.*.local
-.env.example
+!.env.example
 
 # Dependencies
 node_modules
@@ -32,8 +32,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-# Additional ignores
-server/public
-vite.config.ts.*
-*.tar.gz
