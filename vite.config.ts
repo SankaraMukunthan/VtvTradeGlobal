@@ -6,14 +6,16 @@ export default defineConfig(({ mode }) => {
   // Load environment variables
   const env = loadEnv(mode, process.cwd(), '');
   
+  // Only include the environment variables we need in the client
+  const clientEnv = {
+    'import.meta.env.VITE_EMAILJS_PUBLIC_KEY': JSON.stringify(env.VITE_EMAILJS_PUBLIC_KEY),
+    'import.meta.env.VITE_EMAILJS_SERVICE_ID': JSON.stringify(env.VITE_EMAILJS_SERVICE_ID),
+    'import.meta.env.VITE_EMAILJS_TEMPLATE_ID': JSON.stringify(env.VITE_EMAILJS_TEMPLATE_ID),
+  };
+  
   return {
     plugins: [react()],
-    define: {
-      // Use the loaded environment variables
-      'import.meta.env.VITE_EMAILJS_PUBLIC_KEY': JSON.stringify(env.VITE_EMAILJS_PUBLIC_KEY || process.env.VITE_EMAILJS_PUBLIC_KEY),
-      'import.meta.env.VITE_EMAILJS_SERVICE_ID': JSON.stringify(env.VITE_EMAILJS_SERVICE_ID || process.env.VITE_EMAILJS_SERVICE_ID),
-      'import.meta.env.VITE_EMAILJS_TEMPLATE_ID': JSON.stringify(env.VITE_EMAILJS_TEMPLATE_ID || process.env.VITE_EMAILJS_TEMPLATE_ID),
-    },
+    define: clientEnv,
     css: {
       postcss: './postcss.config.mjs'
     },
@@ -34,7 +36,7 @@ export default defineConfig(({ mode }) => {
       minify: mode === 'production',
       rollupOptions: {
         output: {
-          manualChunks(id: string) {
+          manualChunks: (id: string) => {
             if (id.includes('node_modules')) {
               return 'vendor';
             }
