@@ -6,13 +6,17 @@
   NODE_VERSION = "18"
   NPM_FLAGS = "--legacy-peer-deps"
   CI = "false"
+
+# Disable secret scanning for build output
+[secrets]
+  scan = { enabled = false }
+  scan_paths = ["dist/**"]
+
+# Environment variables for build process
+[context.production.environment]
   VITE_EMAILJS_PUBLIC_KEY = "${VITE_EMAILJS_PUBLIC_KEY}"
   VITE_EMAILJS_SERVICE_ID = "${VITE_EMAILJS_SERVICE_ID}"
   VITE_EMAILJS_TEMPLATE_ID = "${VITE_EMAILJS_TEMPLATE_ID}"
-
-# Configure secret scanning to ignore specific files and directories
-[secrets]
-  scan = { enabled = false }  # Disable secret scanning for now
 
 # SPA redirects
 [[redirects]]

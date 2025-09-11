@@ -3,12 +3,16 @@ import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 
 export default defineConfig(({ mode }) => {
+  // Load env file based on `mode` in the current working directory.
+  // Set the third parameter to '' to load all env regardless of the `VITE_` prefix.
   const env = loadEnv(mode, process.cwd(), '');
   
   return {
     plugins: [react()],
     define: {
-      __APP_ENV__: JSON.stringify(env.APP_ENV),
+      'import.meta.env.VITE_EMAILJS_PUBLIC_KEY': JSON.stringify(process.env.VITE_EMAILJS_PUBLIC_KEY),
+      'import.meta.env.VITE_EMAILJS_SERVICE_ID': JSON.stringify(process.env.VITE_EMAILJS_SERVICE_ID),
+      'import.meta.env.VITE_EMAILJS_TEMPLATE_ID': JSON.stringify(process.env.VITE_EMAILJS_TEMPLATE_ID),
     },
     css: {
       postcss: './postcss.config.mjs'
@@ -26,21 +30,17 @@ export default defineConfig(({ mode }) => {
     build: {
       outDir: "dist",
       emptyOutDir: true,
-      assetsInlineLimit: 0,
+      sourcemap: mode === 'development',
+      minify: mode === 'production',
       rollupOptions: {
         output: {
-          manualChunks: (id: string) => {
+          manualChunks(id) {
             if (id.includes('node_modules')) {
-              if (id.includes('@radix-ui')) {
-                return 'radix';
-              }
               return 'vendor';
             }
           }
         }
       },
-      sourcemap: mode === 'development',
-      minify: mode === 'production', // Using boolean instead of string for minify
     },
     server: {
       port: 3000,
