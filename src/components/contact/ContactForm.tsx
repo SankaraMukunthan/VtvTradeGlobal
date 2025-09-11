@@ -55,9 +55,17 @@ const ContactForm = () => {
   const sendEmail = async (data: FormValues) => {
     setIsSubmitting(true);
     try {
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error('EmailJS configuration is missing. Please check your environment variables.');
+      }
+
       await emailjs.send(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID || "",
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID || "",
+        serviceId,
+        templateId,
         {
           to_email: "abiindo3333@gmail.com",
           from_name: data.name,
@@ -66,7 +74,7 @@ const ContactForm = () => {
           interest: getInterestLabel(data.interest),
           message: data.message,
         },
-        import.meta.env.VITE_EMAILJS_PUBLIC_KEY || ""
+        publicKey
       );
       
       // Log successful submission
