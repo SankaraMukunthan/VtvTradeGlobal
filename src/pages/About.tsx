@@ -85,7 +85,7 @@ const About = () => {
               <div className="text-center">
                 <div className="relative mb-4 inline-block">
                   <img 
-                    src="/attached_assets/ceo.jpg" 
+                    src="/assets/team/ceo.jpg" 
                     alt="Venu Gopal V" 
                     className="w-56 h-56 object-cover rounded-full mx-auto"
                   />
@@ -103,7 +103,7 @@ const About = () => {
               <div className="text-center">
                 <div className="relative mb-4 inline-block">
                   <img 
-                    src="/attached_assets/arun_raj.jpg" 
+                    src="/assets/team/arun_raj.jpg" 
                     alt="Arun Raj" 
                     className="w-56 h-56 object-cover rounded-full mx-auto"
                   />
