@@ -1,4 +1,4 @@
-const { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_PUBLIC_KEY } = process.env;
+const { VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, VITE_EMAILJS_PUBLIC_KEY } = process.env;
 const emailjs = require('@emailjs/browser');
 
 exports.handler = async function(event, context) {
@@ -22,12 +22,12 @@ exports.handler = async function(event, context) {
     }
 
     // Initialize EmailJS with environment variables
-    emailjs.init(EMAILJS_PUBLIC_KEY);
+    emailjs.init(VITE_EMAILJS_PUBLIC_KEY);
 
     // Send email using EmailJS
     await emailjs.send(
-      EMAILJS_SERVICE_ID,
-      EMAILJS_TEMPLATE_ID,
+      VITE_EMAILJS_SERVICE_ID,
+      VITE_EMAILJS_TEMPLATE_ID,
       {
         to_email: "abiindo3333@gmail.com",
         from_name: data.name,
