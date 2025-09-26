@@ -54,7 +54,7 @@ const Home = () => {
             <div className="md:w-1/2">
               <div className="relative">
                 <img 
-                  src="/attached_assets/hero_section.png" 
+                  src="/assets/hero_section.png" 
                   alt="Global shipping container operations" 
                   className="w-full h-auto rounded-lg shadow-xl object-cover"
                   style={{ height: "500px" }}

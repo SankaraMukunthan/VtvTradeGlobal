@@ -242,7 +242,7 @@ const About = () => {
                   <h4 className="font-merriweather font-bold text-primary mb-4">Official Documents</h4>
                   <div className="grid grid-cols-1 gap-4">
                     <div className="bg-white p-4 rounded-lg border border-gray-200 hover:shadow-md transition duration-300">
-                      <a href="/attached_assets/Iec_certificate.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                      <a href="/assets/certificates/Iec_certificate.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center">
                         <FileText className="h-6 w-6 text-primary mr-3" />
                         <div>
                           <p className="font-semibold text-primary">IEC Certificate</p>
@@ -252,7 +252,7 @@ const About = () => {
                     </div>
                     
                     <div className="bg-white p-4 rounded-lg border border-gray-200 hover:shadow-md transition duration-300">
-                      <a href="/attached_assets/aadhar_card.jpg" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                      <a href="/assets/aadhar_card.jpg" target="_blank" rel="noopener noreferrer" className="flex items-center">
                         <FileText className="h-6 w-6 text-primary mr-3" />
                         <div>
                           <p className="font-semibold text-primary">Aadhaar Card</p>
@@ -262,7 +262,7 @@ const About = () => {
                     </div>
                     
                     <div className="bg-white p-4 rounded-lg border border-gray-200 hover:shadow-md transition duration-300">
-                      <a href="/attached_assets/gst_certificate.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                      <a href="/assets/certificates/gst_certificate.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center">
                         <FileText className="h-6 w-6 text-primary mr-3" />
                         <div>
                           <p className="font-semibold text-primary">GST Certificate</p>
@@ -272,7 +272,7 @@ const About = () => {
                     </div>
                     
                     <div className="bg-white p-4 rounded-lg border border-gray-200 hover:shadow-md transition duration-300">
-                      <a href="/attached_assets/FSSAI LICENCE.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                      <a href="/assets/certificates/FSSAI LICENCE.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center">
                         <FileText className="h-6 w-6 text-primary mr-3" />
                         <div>
                           <p className="font-semibold text-primary">FSSAI License</p>
